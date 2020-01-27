@@ -22,10 +22,14 @@ public class DrawingApp {
 		
 		AbstractApplicationContext context = new  ClassPathXmlApplicationContext("spring.xml");
 		context.registerShutdownHook();
-		Triangle triangle = (Triangle)  context.getBean("triangle1");
+
+		Shape triangle = (Triangle)  context.getBean("triangle1");
 		
 		System.out.println("CALL TO DRAW METHOD.....");
 		triangle.draw();
+
+		//close too early will cause a problem
+		context.close();
 	}
 
 }

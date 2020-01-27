@@ -17,7 +17,7 @@ import org.springframework.context.ApplicationContextAware;
  * @author migue
  *
  */
-public class Triangle implements ApplicationContextAware, BeanNameAware{
+public class Triangle implements ApplicationContextAware, BeanNameAware,Shape{
 
 	private Point pointA;
 	private Point pointB;
@@ -39,13 +39,14 @@ public class Triangle implements ApplicationContextAware, BeanNameAware{
 		return pointA;
 	}
 
-
 	/**
 	 * @param pointA the pointA to set
 	 */
 	public void setPointA(Point pointA) {
 		this.pointA = pointA;
 	}
+
+
 
 
 	/**
